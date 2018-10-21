@@ -1,7 +1,7 @@
 {
   "name": "hex-format",
   "version": "1.0.0",
-  "description": "Turn any string into a proper hex color code",
+  "description": "Turn a string into a 6-digit hex color value",
   "main": "src/index.js",
   "scripts": {
     "test": "jest",
@@ -31,5 +31,9 @@
     "eslint-plugin-import": "^2.14.0",
     "jest": "^23.6.0",
     "terser": "^3.10.1"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   }
 }
