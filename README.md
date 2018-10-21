@@ -34,7 +34,7 @@ import hexFormat from 'hex-format';
 
 Now you are ready to use hex-format.
 
-### `<script>` tag
+### `<script>` tag
 
 Include the following code in your HTML file, replacing the path with the actual path to the JavaScript file:
 
@@ -44,7 +44,7 @@ Include the following code in your HTML file, replacing the path with the actual
 
 hex-format's source code is available [uncompressed](https://raw.githubusercontent.com/nil/hex-format/master/src/index.js), [minified](https://raw.githubusercontent.com/nil/hex-format/master/src/index.min.js) and on [unpkg](https://unpkg.com/hex-format).
 
-## Usage
+## Usage
 
 From now on, you can use `hexFormat(value)`:
 
@@ -55,26 +55,17 @@ hexFormat('#a9') //=> #A9A9A9
 
 ## About
 
-<details>
-  <summary>Contributing</summary>
-  If you find any issue, have troubles figuring out something or want to suggest a change, please [open an issue](https://github.com/nil/hex-format/issues/new) or [make a pull request](https://github.com/nil/hex-format/compare).
+### Contributing
+
+If you find any issue, have troubles figuring out something or want to suggest a change, please [open an issue](https://github.com/nil/hex-format/issues/new) or [make a pull request](https://github.com/nil/hex-format/compare).
 </details>
 
-<details>
-  <summary>Tests</summary>
-  To run the tests, first install the dev dependencies and then run the `test` command:
+### Tests
+To run the tests, first install the dev dependencies and then run the `test` command:
 
-  ```sh
-  npm install -d && npm test
-  ```
-</details>
+```sh
+npm install -d && npm test
+```
 
-<details>
-  <summary>Author</summary>
-  hex-format is written by Nil Vila. Find him on [Twitter](https://twitter.com/nilvilam) and [GitHub](https://github.com/nil).
-</details>
-
-<details>
-  <summary>License</summary>
-  © 2018 [Nil Vila](https://twitter.com/nilvilam). Released under the [MIT License](https://github.com/nil/hex-format/blob/master/LICENSE).
-</details>
+### License
+© 2018 [Nil Vila](https://twitter.com/nilvilam). Released under the [MIT License](https://github.com/nil/hex-format/blob/master/LICENSE).
