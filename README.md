@@ -12,7 +12,7 @@ Most color inputs accept hex values, but only if they are the standard, 6-digit 
 
 ## Installation
 
-There are two ways to install hex-format. A package manager is optimal if you are working with Node, whereas HTML's script tag is better for browser-based projects.
+There are two ways to install hex-format. A [package manager](#npm) is optimal if you are working with Node, whereas [HTML's script tag](#script-tag) is better for browser-based projects.
 
 ### npm
 
@@ -34,7 +34,7 @@ import hexFormat from 'hex-format';
 
 Now you are ready to use hex-format.
 
-### `<script>` tag
+### <script> tag
 
 Include the following code in your HTML file, replacing the path with the actual path to the JavaScript file:
 
