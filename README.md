@@ -6,7 +6,6 @@ Most color inputs accept hex values, but only if they are the standard, 6-digit 
 
 [![Build status](https://travis-ci.org/nil/hex-format.svg?branch=master)](https://travis-ci.org/nil/hex-format)
 [![Dependencies status](https://img.shields.io/david/dev/nil/hex-format.svg)](https://david-dm.org/nil/hex-format)
-[![Test coverage](https://img.shields.io/codecov/c/github/nil/hex-format.svg)](https://codecov.io/gh/nil/hex-format)
 [![Version](https://img.shields.io/npm/v/hex-format.svg)](https://www.npmjs.com/package/hex-format)
 [![License](https://img.shields.io/npm/l/hex-format.svg)](https://github.com/nil/hex-format/blob/master/LICENSE)
 
