@@ -11,10 +11,6 @@ Most color inputs accept hex values, but only if they are the standard, 6-digit 
 
 ## Installation
 
-There are two ways to install hex-format. A [package manager](#npm) is optimal if you are working with Node, whereas [HTML's script tag](#script-tag) is better for browser-based projects.
-
-### npm
-
 Open Terminal and install the package with this command:
 
 ```sh
@@ -25,31 +21,60 @@ Then import hex-format into any file you are planning to use it:
 
 ```js
 // Node's require()
-const hexFormat = require('hex-format');
+const Hex = require('hex-format');
 
 // ES6 imports
-import hexFormat from 'hex-format';
+import Hex from 'hex-format';
+```
+
+Finally, call hex-format’s class. If you want to use the default options, remove `[options]`, otherwise, replace it with an object. Find all the available options in [its section](#options).
+
+```js
+const hex = new Hex([options]);
 ```
 
 Now you are ready to use hex-format.
 
-### <script> tag
 
-Include the following code in your HTML file, replacing the path with the actual path to the JavaScript file:
+## API
 
-```html
-<script src="path/to/hex-format.js"></script>
-```
+### `.format`
 
-hex-format's source code is available [uncompressed](https://raw.githubusercontent.com/nil/hex-format/master/src/index.js), [minified](https://raw.githubusercontent.com/nil/hex-format/master/src/index.min.js) and on [unpkg](https://unpkg.com/hex-format).
-
-## Usage
-
-From now on, you can use `hexFormat(value)`:
+Returns `false` or a valid, 6-digit hex color code.
 
 ```js
-hexFormat('154') //=> #115544
-hexFormat('#a9') //=> #A9A9A9
+hex.format('154') //=> #115544
+hex.format('#a9') //=> #A9A9A9
+hex.format('#xx9') //=> false
+```
+
+## Options
+
+This options allow you to configure the behavior of a string when it its formatted.
+
+### Methods
+
+Replace the default format algorithm with another predefined one.
+
+**key**: number of valid characters (7 if there are more than 6).
+
+| Value      | Description                               | Valid for        | Example             |
+|------------|-------------------------------------------|------------------|---------------------|
+| `invalid`  | Always returns false                      | 1, 2, 3, 4, 5, 7 | 3A => false         |
+| `altern`   | Doubles or triples the characters         | 1, 2, 3, 4, 5    | B1C => #BB11CC      |
+| `repeat`   | Repeat the characters until the end       | 1, 2, 4, 5, 6    | 5EF1 => #55EEFF     |
+| `fill`     | Fill the extra space with 0               | 1, 2, 4, 5, 6    | 2D => #2D0000       |
+| `equal`    | The result is the same as the given value | 6                | 6E7F2D => #6E7F2D   |
+| `truncate` | Takes only the 6 first characters         | 6, 7             | E8F1C6A5 => #E8F1C6 |
+
+Example:
+
+```js
+const hex = Hex({
+  1: 'repeat',
+  4: 'fill'
+  7: 'invalid'
+})
 ```
 
 ## About
