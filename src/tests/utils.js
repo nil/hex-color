@@ -2,7 +2,7 @@ import Hex from '../index';
 
 const hex = new Hex();
 
-export function defaultOptions(name, input, output) {
+export function formatDefault(name, input, output) {
   test(name, () => {
     expect(hex.format(`#${input}`)).toBe(output);
     expect(hex.format(input)).toBe(output);
@@ -10,7 +10,7 @@ export function defaultOptions(name, input, output) {
   });
 }
 
-export function customOptions(name, input, output, options) {
+export function formatCustom(name, input, output, options) {
   const customHex = new Hex(options);
 
   test(name, () => {
@@ -20,7 +20,7 @@ export function customOptions(name, input, output, options) {
   });
 }
 
-export function customMethods(length, input, output, method) {
+export function methodCustom(length, input, output, method) {
   const options = {};
   options[length] = method;
 
