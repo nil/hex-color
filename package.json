@@ -1,6 +1,6 @@
 {
   "name": "hex-format",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Turn a string into a 6-digit hex color value",
   "main": "src/index.js",
   "scripts": {
