@@ -1,7 +1,9 @@
 /*!
- * hex-format v2.0.0
+ * hex-format v2.1.0
  * by Nil Vila
  */
+
+import OptionsConfig from 'options-config';
 
 export const defaults = {
   1: {
@@ -67,50 +69,6 @@ export function printWarnMessage(key) {
 }
 
 
-/**
- * Check if the specified option is valid.
- *
- * @param {string} key    - Name of the option.
- * @param {object} valObj - Object containing the 'key'.
- * @param {object} list   - List of the default configuration.
- *
- * @returns {string} A valid value, specified or default.
- */
-
-export function validateChosenValue(key, valObj, list = defaults) {
-  const object = list[key];
-  const val = valObj ? valObj[key] : undefined;
-  const type = object.type;
-  const accepted = object.accepted;
-  const defaultValue = object.default;
-
-  // Check if the option is specified
-  if (!val && val !== false && val !== 0) {
-    return defaultValue;
-  }
-
-  // Check if the specified option is a valid type
-  if (type.includes(typeof val)) {
-    // Check if the specified option has an accepted value
-    if (accepted && !accepted.includes(val)) {
-      console.error(`hex-format: value '${val}' is not accepted for '${key}'.`);
-      printWarnMessage(key);
-
-      return false;
-    } else {
-      return val;
-    }
-  } else {
-    const typeList = typeof type === 'string' ? type : type.join(' or a ');
-
-    // Print error and warning
-    console.error(`hex-format: '${key}' must be a ${typeList}.`);
-    printWarnMessage(key);
-
-    return defaultValue;
-  }
-}
-
 export const returnCode = {
   invalid() {
     return false;
@@ -138,18 +96,14 @@ export const returnCode = {
   }
 };
 
+
 export default class {
   // Options
   constructor(obj) {
-    // Declare object
-    this.options = {};
-
     // Set up configuration
-    for (const key in defaults) {
-      if (Object.prototype.hasOwnProperty.call(defaults, key)) {
-        this.options[key] = validateChosenValue(key, obj);
-      }
-    }
+    const options = new OptionsConfig(defaults);
+
+    this.options = options.validate(obj || {});
   }
 
   format(value) {
