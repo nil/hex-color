@@ -1,11 +1,11 @@
 {
   "name": "hex-format",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Turn a string into a 6-digit hex color value",
-  "main": "src/index.js",
+  "main": "dist/main.js",
   "scripts": {
     "test": "jest",
-    "minify": "terser src/index.js -c -m -o src/index.min.js --comments /^!/"
+    "build": "rollup --config"
   },
   "keywords": [
     "format",
@@ -33,7 +33,8 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "jest": "^23.6.0",
-    "terser": "^3.10.1"
+    "rollup": "^0.67.1",
+    "rollup-plugin-terser": "^3.0.0"
   },
   "dependencies": {
     "options-config": "^1.2.1"

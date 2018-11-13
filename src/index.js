@@ -1,8 +1,3 @@
-/*!
- * hex-format v2.1.0
- * by Nil Vila
- */
-
 import OptionsConfig from 'options-config';
 
 export const defaults = {
