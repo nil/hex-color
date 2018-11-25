@@ -11,7 +11,7 @@ export default {
   output: {
     file: 'dist/main.js',
     name: 'hexFormat',
-    format: 'umd',
+    format: 'cjs',
     exports: 'named',
     globals: {
       'options-config': 'OptionsConfig'
@@ -19,11 +19,11 @@ export default {
     banner: bannerText
   },
   external: ['options-config'],
-  plugins: [terser(
-    {
+  plugins: [
+    terser({
       output: {
         comments: /^!/
       }
-    }
-  )]
+    })
+  ]
 };

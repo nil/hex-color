@@ -4,37 +4,37 @@ export const defaults = {
   1: {
     default: 'altern',
     type: ['string', 'boolean'],
-    accepted: ['invalid', false, 'altern', 'repeat', 'fill']
+    valid: ['invalid', false, 'altern', 'repeat', 'fill']
   },
   2: {
     default: 'repeat',
     type: ['string', 'boolean'],
-    accepted: ['invalid', false, 'altern', 'repeat', 'fill']
+    valid: ['invalid', false, 'altern', 'repeat', 'fill']
   },
   3: {
     default: 'altern',
     type: ['string', 'boolean'],
-    accepted: ['invalid', false, 'altern']
+    valid: ['invalid', false, 'altern']
   },
   4: {
     default: 'altern',
     type: ['string', 'boolean'],
-    accepted: ['invalid', false, 'altern', 'repeat', 'fill']
+    valid: ['invalid', false, 'altern', 'repeat', 'fill']
   },
   5: {
     default: 'altern',
     type: ['string', 'boolean'],
-    accepted: ['invalid', false, 'altern', 'repeat', 'fill']
+    valid: ['invalid', false, 'altern', 'repeat', 'fill']
   },
   6: {
     default: 'equal',
     type: 'string',
-    accepted: ['repeat', 'fill', 'equal', 'truncate']
+    valid: ['repeat', 'fill', 'equal', 'truncate']
   },
   7: {
     default: 'truncate',
     type: ['string', 'boolean'],
-    accepted: ['invalid', false, 'truncate']
+    valid: ['invalid', false, 'truncate']
   },
   allValid: {
     type: 'boolean',

@@ -1,6 +1,6 @@
 {
   "name": "hex-format",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "Turn a string into a 6-digit hex color value",
   "main": "dist/main.js",
   "scripts": {
@@ -37,6 +37,6 @@
     "rollup-plugin-terser": "^3.0.0"
   },
   "dependencies": {
-    "options-config": "^3.0.0"
+    "options-config": "^3.1.2"
   }
 }
